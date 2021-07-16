@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[14]:
-
-
 import numpy as np
 
 # Compute missing fields of array element descriptor.
