@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[17]:
-
-
 import numpy as np
 import scipy
 import check_array_element
@@ -114,11 +111,11 @@ def arraygain(PHI,TH,PHI0,TH0,AD,ED):
         # (5) Array factor, normalized to unity in the array broadside
         #     direction.
 
-        PsiX = 2 * pi * Dx * np.cos(phi) * np.sin(th) - deltaX
-        PsiY = 2*pi*Dy*sin(th)*sin(phi) - deltaY
+        PsiX = 2 * np.pi * Dx * np.cos(phi) * np.sin(th) - deltaX
+        PsiY = 2 * np.pi * Dy * np.sin(th)  * np.sin(phi) - deltaY
         AFx = abs(scipy.special.diric(PsiX,Mx))
         AFy = abs(scipy.special.diric(PsiY,My))
-        AF = AFx * AFy;
+        AF = AFx * AFy
     else:
         Mx = 1
         My = 1
@@ -132,10 +129,3 @@ def arraygain(PHI,TH,PHI0,TH0,AD,ED):
     Gref = Ge0 * Mx * My
 
     return AF,GE,GREF,DELTAX,DELTAY
-
-
-# In[ ]:
-
-
-
-
